@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RDLCReports.Pages
+namespace RDLCReports.Pages.Student
 {
-    public class StudentModel : PageModel
+    public class StudentModalModel : PageModel
     {
         public void OnGet()
         {

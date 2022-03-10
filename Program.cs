@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using RDLCReports.Contents;
 using RDLCReports.Data;
 using RDLCReports.Data.StudentsTable;
 
@@ -17,6 +18,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IStudentAppService, StudentAppService>();
 
 var app = builder.Build();
 
