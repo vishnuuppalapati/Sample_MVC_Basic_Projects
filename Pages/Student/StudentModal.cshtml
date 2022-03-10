@@ -2,3 +2,30 @@
 @model RDLCReports.Pages.Student.StudentModalModel
 @{
 }
+@section scripts
+{
+    <script src="~/Pages/Nodes/createModel.js"></script>
+}
+<div>
+    <div>
+        <table width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA" >
+        <tr align="left" style="background-color:#004080;color:White;" >
+            <th> StudentName </th>                        
+            <th> Standard </th>            
+            <th> Address </th>                        
+        </tr>
+   
+        @foreach(var item in Model.getAllStudents)
+            {
+                     <tr>
+  <td>@item.Id </td>   
+                  <td>@item.StudentName </td>     
+                   <td>@item.Address </td>     
+        </tr>
+               
+           
+            }
+    </table>
+    </div>
+</div>
+
