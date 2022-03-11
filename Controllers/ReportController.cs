@@ -23,5 +23,12 @@ namespace RDLCReports.Controllers
             var result =await _studentRepository.GetAll();
             return StatusCode(StatusCodes.Status200OK, result);
         }
+        [HttpGet]
+        [Route("Report/GetRDLCReport/{reportName}")]
+        public async Task<IActionResult> GetRDLCReport(string reportName)
+        {
+            var returnString = _studentRepository.GenerateReportAsync(reportName);
+            return StatusCode(StatusCodes.Status200OK);
+        }
     }
 }

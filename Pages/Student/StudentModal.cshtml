@@ -4,7 +4,7 @@
 }
 @section scripts
 {
-    <script src="~/Pages/Nodes/createModel.js"></script>
+    <script src="~/Pages/Student/StudentModel.js"></script>
 }
 <div>
     <div>
@@ -18,8 +18,8 @@
         @foreach(var item in Model.getAllStudents)
             {
                 <tr>
-                  <td>@item.Id </td>   
-                  <td>@item.StudentName </td>     
+                  <td>@item.StudentName </td>   
+                  <td>@item.Standard </td>     
                   <td>@item.Address </td>     
                 </tr>
                
